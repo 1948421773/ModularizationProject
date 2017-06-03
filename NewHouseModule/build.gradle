@@ -25,6 +25,8 @@ android {
         }
     }
 
+    resourcePrefix 'new_house_'
+
     sourceSets {
         main {
             if (isBuildModule.toBoolean()) {

@@ -18,6 +18,7 @@ android {
         }
     }
 
+    resourcePrefix 'app_'
     lintOptions {
         abortOnError false
     }

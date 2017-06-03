@@ -6,29 +6,29 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/im_activity_vertical_margin"
-    android:paddingLeft="@dimen/im_activity_horizontal_margin"
-    android:paddingRight="@dimen/im_activity_horizontal_margin"
-    android:paddingTop="@dimen/im_activity_vertical_margin"
+    android:paddingBottom="@dimen/app_activity_vertical_margin"
+    android:paddingLeft="@dimen/app_activity_horizontal_margin"
+    android:paddingRight="@dimen/app_activity_horizontal_margin"
+    android:paddingTop="@dimen/app_activity_vertical_margin"
     tools:context="com.baronzhang.android.modularization.MainActivity">
 
     <Button
         android:id="@+id/btn_goto_new_house"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="@string/string_goto_new_house_module" />
+        android:text="@string/app_string_goto_new_house_module" />
 
     <Button
         android:id="@+id/btn_goto_second_house"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/string_goto_second_house_module" />
+        android:text="@string/app_string_goto_second_house_module" />
 
     <Button
         android:id="@+id/btn_goto_im"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/string_goto_im_module" />
+        android:text="@string/app_string_goto_im_module" />
 </LinearLayout>

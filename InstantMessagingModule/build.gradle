@@ -25,6 +25,7 @@ android {
         }
     }
 
+    resourcePrefix 'im_'
     sourceSets {
         main {
             if (isBuildModule.toBoolean()) {

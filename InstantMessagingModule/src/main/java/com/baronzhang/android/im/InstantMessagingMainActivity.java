@@ -12,11 +12,6 @@ import java.util.ArrayList;
 
 public class InstantMessagingMainActivity extends BaseActivity {
 
-    @InjectUriParam("cityId")
-    String cityId;
-
-    @Inject
-    ArrayList<Integer> brokerIdList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +23,8 @@ public class InstantMessagingMainActivity extends BaseActivity {
         TextView textView1 = (TextView) findViewById(R.id.textView1);
         TextView textView2 = (TextView) findViewById(R.id.textView2);
 
-        textView1.setText("城市ID: " + cityId);
-        textView2.setText("经纪人ID列表: " + brokerIdList);
+//        textView1.setText("城市ID: " + cityId);
+//        textView2.setText("经纪人ID列表: " + brokerIdList);
 
     }
 }

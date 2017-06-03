@@ -11,11 +11,6 @@ import com.baronzhang.android.router.annotation.inject.InjectUriParam;
 
 public class NewHouseMainActivity extends BaseActivity {
 
-    @InjectUriParam
-    String cityId;
-
-    @Inject
-    HouseDetail houseDetail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +22,7 @@ public class NewHouseMainActivity extends BaseActivity {
         TextView textView1 = (TextView) findViewById(R.id.textView1);
         TextView textView2 = (TextView) findViewById(R.id.textView2);
 
-        textView1.setText("城市ID: " + cityId);
-        textView2.setText("新房: " + houseDetail);
+     //   textView1.setText("城市ID: " + cityId);
+      //  textView2.setText("新房: " + houseDetail);
     }
 }

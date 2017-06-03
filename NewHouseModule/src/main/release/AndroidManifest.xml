@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.baronzhang.android.newhouse">
 
     <application
@@ -7,6 +8,7 @@
         android:supportsRtl="true">
         <activity
             android:name="com.baronzhang.android.newhouse.NewHouseMainActivity"
+            tools:replace="label"
             android:label="@string/new_house_label_home_page">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />

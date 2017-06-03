@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.baronzhang.android.newhouse">
 
     <application
@@ -7,6 +8,7 @@
         android:icon="@mipmap/new_house_ic_launcher"
         android:label="@string/new_house_app_name"
         android:supportsRtl="true"
+        tools:replace="label"
         android:theme="@style/NewHouseAppTheme">
         <activity
             android:name="com.baronzhang.android.newhouse.NewHouseMainActivity"
