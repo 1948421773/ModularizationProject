@@ -3,6 +3,7 @@ package com.baronzhang.android.im;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.baronzhang.android.commonbusiness.base.activity.BaseActivity;
 import com.baronzhang.android.router.RouterInjector;
 import com.baronzhang.android.router.annotation.inject.Inject;
@@ -10,6 +11,7 @@ import com.baronzhang.android.router.annotation.inject.InjectUriParam;
 
 import java.util.ArrayList;
 
+@Route(path="/im/main")
 public class InstantMessagingMainActivity extends BaseActivity {
 
 

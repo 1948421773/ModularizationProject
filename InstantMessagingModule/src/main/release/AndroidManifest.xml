@@ -5,7 +5,6 @@
 
     <application
         android:allowBackup="true"
-        tools:replace="label"
         android:supportsRtl="true">
         <activity
             android:name="com.baronzhang.android.im.InstantMessagingMainActivity"

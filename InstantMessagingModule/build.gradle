@@ -17,6 +17,11 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
     }
     buildTypes {
         release {
@@ -48,4 +53,7 @@ dependencies {
 
     compile rootProject.ext.dependencies["router"]
     annotationProcessor rootProject.ext.dependencies["router-compiler"]
+
+    compile "com.alibaba:arouter-api:$arouter_api"
+    annotationProcessor "com.alibaba:arouter-compiler:$arouter_compiler"
 }

@@ -2,6 +2,7 @@ package com.baronzhang.android.modularization;
 
 import android.os.Bundle;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.baronzhang.android.commonbusiness.base.activity.BaseActivity;
 import com.baronzhang.android.commonbusiness.model.HouseDetail;
 import com.baronzhang.android.commonbusiness.router.RouterService;
@@ -48,11 +49,8 @@ public class MainActivity extends BaseActivity {
 
     @OnClick(R.id.btn_goto_im)
     void startIMActivity() {
-        ArrayList<Integer> brokerIdList = new ArrayList<>();
-        brokerIdList.add(20000);
-        brokerIdList.add(20001);
-        brokerIdList.add(20002);
-        routerService.startIMActivity("112", brokerIdList);
+        ARouter.getInstance().build("/im/main")
+                .navigation();
     }
 
     @Override
