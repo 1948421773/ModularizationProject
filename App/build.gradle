@@ -1,10 +1,16 @@
-apply plugin: 'com.android.application'
+if (isRunModule(project)) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.baronzhang.android.modularization"
+        if(isRunModule(project)) {
+            applicationId "com.baronzhang.android.modularization"
+        }
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
@@ -37,7 +43,7 @@ dependencies {
     })
     testCompile rootProject.ext.dependencies["junit"]
 
-    if (isBuildModule.toBoolean()) {
+    if (run_module!=project.getName()) {
         compile project(':CoreModel')
         compile project(':CommonBusiness')
     } else {

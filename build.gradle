@@ -13,6 +13,11 @@ buildscript {
 ext{
     arouter_compiler= arouter_compiler_version.toString();
     arouter_api = arouter_api_version.toString();
+    app_module="App"
+    instant_message_module="InstantMessagingModule"
+    new_house_module="NewHouseModule"
+    second_house_module="SecondHouseModule"
+    run_module=instant_message_module
 }
 
 allprojects {
@@ -24,4 +29,8 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+boolean isRunModule(Project project){
+    return run_module == project.getName()
 }

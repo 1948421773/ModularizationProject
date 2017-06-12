@@ -1,6 +1,6 @@
-if(isBuildModule.toBoolean()){
+if (isRunModule(project)) {
     apply plugin: 'com.android.application'
-}else{
+} else {
     apply plugin: 'com.android.library'
 }
 
@@ -19,7 +19,7 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [ moduleName : project.getName() ]
+                arguments = [moduleName: project.getName()]
             }
         }
     }
@@ -33,7 +33,7 @@ android {
     resourcePrefix 'im_'
     sourceSets {
         main {
-            if (isBuildModule.toBoolean()) {
+            if (isRunModule(project)) {
                 manifest.srcFile 'src/main/debug/AndroidManifest.xml'
             } else {
                 manifest.srcFile 'src/main/release/AndroidManifest.xml'
