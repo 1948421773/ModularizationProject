@@ -32,6 +32,5 @@ dependencies {
     compile rootProject.ext.dependencies["recyclerview-v7"]
     compile rootProject.ext.dependencies["constraint-layout"]
 
-    compile rootProject.ext.dependencies["router"]
-    annotationProcessor rootProject.ext.dependencies["router-compiler"]
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }

@@ -1,16 +1,10 @@
-if (isRunModule(project)) {
-    apply plugin: 'com.android.application'
-} else {
-    apply plugin: 'com.android.library'
-}
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        if(isRunModule(project)) {
-            applicationId "com.baronzhang.android.modularization"
-        }
+        applicationId "com.baronzhang.android.modularization"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
@@ -19,7 +13,7 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [ moduleName : project.getName() ]
+                arguments = [moduleName: project.getName()]
             }
         }
     }
@@ -43,7 +37,7 @@ dependencies {
     })
     testCompile rootProject.ext.dependencies["junit"]
 
-    if (run_module!=project.getName()) {
+    if (run_module != project.getName()) {
         compile project(':CoreModel')
         compile project(':CommonBusiness')
     } else {

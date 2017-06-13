@@ -1,4 +1,4 @@
-if (isRunModule(project)) {
+if(isBuildModule.toBoolean()){
     apply plugin: 'com.android.application'
 } else {
     apply plugin: 'com.android.library'
@@ -33,7 +33,7 @@ android {
     resourcePrefix 'im_'
     sourceSets {
         main {
-            if (isRunModule(project)) {
+            if (isBuildModule.toBoolean()) {
                 manifest.srcFile 'src/main/debug/AndroidManifest.xml'
             } else {
                 manifest.srcFile 'src/main/release/AndroidManifest.xml'
