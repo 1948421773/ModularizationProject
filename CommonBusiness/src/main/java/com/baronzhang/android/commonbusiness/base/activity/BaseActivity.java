@@ -5,10 +5,14 @@ import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
 
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.baronzhang.android.commonbusiness.model.ConstantRouter;
+import com.baronzhang.android.commonbusiness.model.DataCenter;
+
 /**
  * @author baronzhang (baron[dot]zhanglei[at]gmail[dot]com ==>> baronzhang.com)
  */
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     /*
      * 解决Vector兼容性问题
@@ -28,6 +32,13 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(!DataCenter.getInstance().isLogin()){
+            String curUrl = ConstantRouter.getCurRouter(this.getClass().getSimpleName());
+            ARouter.getInstance().build(ConstantRouter.LOGIN_ACTIVITY)
+                    .withString("targetUrl",curUrl)
+                    .navigation();
+            finish();
+        }
     }
 
     @Override

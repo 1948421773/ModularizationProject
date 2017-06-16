@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
@@ -9,6 +10,11 @@ android {
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
 
     }
     buildTypes {
@@ -19,7 +25,15 @@ android {
     }
 }
 
-
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath rootProject.ext.classpath["butterknife-gradle-plugin"]
+        classpath rootProject.ext.classpath["tools-build-gradle"]
+    }
+}
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -32,4 +46,9 @@ dependencies {
     compile rootProject.ext.dependencies["constraint-layout"]
     compile project(':OpenSourceLibrary')
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    compile rootProject.ext.dependencies["ARouter-api"]
+    annotationProcessor rootProject.ext.dependencies["ARouter-compiler"]
+    compile rootProject.ext.dependencies["butterknife"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
 }
