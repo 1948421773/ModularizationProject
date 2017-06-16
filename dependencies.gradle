@@ -3,7 +3,7 @@ def rxBindingVersion = "0.4.0"
 def retrofitVersion = "2.2.0"
 def okHttpVersion = "3.7.0"
 def stethoVersion = "1.5.0"
-def butterKnifeVersion = "8.5.1"
+def butterKnifeVersion = "8.6.0"
 def daggerVersion = "2.8"
 def routerVersion = "0.2.3"
 

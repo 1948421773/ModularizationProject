@@ -1,8 +1,9 @@
-if(isBuildModule.toBoolean()){
+if (isBuildModule.toBoolean()) {
     apply plugin: 'com.android.application'
-}else{
+} else {
     apply plugin: 'com.android.library'
 }
+apply plugin: 'com.jakewharton.butterknife'
 
 android {
     compileSdkVersion 25
@@ -43,18 +44,31 @@ android {
     }
 }
 
-
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.6.0'
+        classpath 'com.android.tools.build:gradle:2.3.1'
+    }
+}
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    if (isBuildModule.toBoolean()) {
+        compile 'com.jakewharton:butterknife:8.6.0'
+        annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    }
     testCompile rootProject.ext.dependencies["junit"]
     compile project(':CoreModel')
     compile project(':CommonBusiness')
-
-
     compile "com.alibaba:arouter-api:$arouter_api"
     annotationProcessor "com.alibaba:arouter-compiler:$arouter_compiler"
+
+    compile rootProject.ext.dependencies["butterknife"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
 }
 

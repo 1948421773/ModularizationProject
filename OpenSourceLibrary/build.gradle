@@ -28,8 +28,6 @@ dependencies {
     })
     testCompile rootProject.ext.dependencies["junit"]
 
-    compile rootProject.ext.dependencies["butterknife"]
-    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
 
     compile rootProject.ext.dependencies["rxandroid"]
 

@@ -2,27 +2,24 @@ package com.baronzhang.android.modularization;
 
 import android.os.Bundle;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.baronzhang.android.commonbusiness.base.activity.BaseActivity;
+import com.baronzhang.android.commonbusiness.model.ConstantRouter;
 import com.baronzhang.android.commonbusiness.model.HouseDetail;
-import com.baronzhang.android.router.Router;
 
 import java.util.ArrayList;
 
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 
-public class MainActivity extends BaseActivity {
+@Route(path = "/app/main_activity")
+public class MainActivity extends AppBaseActivity {
 
 
-    private Unbinder unbinder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.app_activity_main);
-        unbinder = ButterKnife.bind(this);
 
     }
 
@@ -44,14 +41,14 @@ public class MainActivity extends BaseActivity {
 
     @OnClick(R2.id.btn_goto_im)
     void startIMActivity() {
-        ARouter.getInstance().build("/im/main")
+        ARouter.getInstance().build(ConstantRouter.IM_MAINACTIVITY)
+                .withString("cityId","001")
+                .withString("brokerIdList","haha,haha,haha")
                 .navigation();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (unbinder != null)
-            unbinder.unbind();
     }
 }

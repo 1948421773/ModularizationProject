@@ -1,6 +1,7 @@
 package com.baronzhang.android.commonbusiness.base.activity;
 
 import android.os.Bundle;
+import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
 
@@ -29,6 +30,10 @@ public class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
     }
 
+    @Override
+    public void setContentView(@LayoutRes int layoutResID) {
+        super.setContentView(layoutResID);
+    }
     @Override
     protected void onDestroy() {
         super.onDestroy();
