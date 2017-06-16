@@ -6,7 +6,8 @@ def stethoVersion = "1.5.0"
 def butterKnifeVersion = "8.6.0"
 def daggerVersion = "2.8"
 def routerVersion = "0.2.3"
-
+def arouterApiVersion="1.2.1.1"
+def arouterCompilerVersion="1.1.2.1"
 project.ext {
     android = [
             compileSdkVersion: 25,
@@ -68,6 +69,10 @@ project.ext {
             "retrofit2-fastjson-converter": "com.github.BaronZ88:Retrofit2-FastJson-Converter:1.2",
 
             //test
-            "junit"                       : "junit:junit:4.12"
+            "junit"                       : "junit:junit:4.12",
+
+            //alibaba ARouter
+            "ARouter-api"                 : "com.alibaba:arouter-api:${arouterApiVersion}",
+            "ARouter-compiler"            : "com.alibaba:arouter-compiler:${arouterCompilerVersion}"
     ]
 }

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 import butterknife.OnClick;
 
-@Route(path = "/app/main_activity")
+@Route(path = "/app/MainActivity")
 public class MainActivity extends AppBaseActivity {
 
 
@@ -25,18 +25,12 @@ public class MainActivity extends AppBaseActivity {
 
     @OnClick(R2.id.btn_goto_new_house)
     void startNewHouseActivity() {
+        ARouter.getInstance().build(ConstantRouter.NEW_HOUSE_MAINACTIVITY).navigation();
     }
 
     @OnClick(R2.id.btn_goto_second_house)
     void startSecondHouseActivity() {
-
-        ArrayList<HouseDetail> houseDetailList = new ArrayList<>();
-        houseDetailList.add(new HouseDetail("10001", "潍坊一村", 88));
-        houseDetailList.add(new HouseDetail("10002", "潍坊二村", 120));
-        houseDetailList.add(new HouseDetail("10003", "潍坊二村", 99));
-        houseDetailList.add(new HouseDetail("10004", "潍坊三村", 86));
-        houseDetailList.add(new HouseDetail("10005", "潍坊五村", 80));
-
+        ARouter.getInstance().build(ConstantRouter.SECOND_HOUSE_MAINACTIVITY).navigation();
     }
 
     @OnClick(R2.id.btn_goto_im)

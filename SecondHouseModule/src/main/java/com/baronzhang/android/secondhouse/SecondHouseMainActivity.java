@@ -4,12 +4,14 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.baronzhang.android.commonbusiness.model.HouseDetail;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 
+@Route(path = "/second_house/SecondHouseMainActivity")
 public class SecondHouseMainActivity extends SecondHouseBaseActivity{
 
     @Autowired

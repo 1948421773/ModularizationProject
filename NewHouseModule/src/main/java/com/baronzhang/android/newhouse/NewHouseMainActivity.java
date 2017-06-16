@@ -3,8 +3,12 @@ package com.baronzhang.android.newhouse;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Autowired;
+import com.alibaba.android.arouter.facade.annotation.Route;
+
 import butterknife.BindView;
 
+@Route(path = "/new_house/NewHouseMainActivity")
 public class NewHouseMainActivity extends NewHouseBaseActivity{
 
     @BindView(R2.id.textView1)

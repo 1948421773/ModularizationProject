@@ -9,7 +9,7 @@ import com.baronzhang.android.router.RouterInjector;
 
 import butterknife.BindView;
 
-@Route(path="/im/main_activity")
+@Route(path="/im/InstantMessagingMainActivity")
 public class InstantMessagingMainActivity extends IMBaseActivity{
 
     @Autowired

@@ -65,8 +65,9 @@ dependencies {
     testCompile rootProject.ext.dependencies["junit"]
     compile project(':CoreModel')
     compile project(':CommonBusiness')
-    compile "com.alibaba:arouter-api:$arouter_api"
-    annotationProcessor "com.alibaba:arouter-compiler:$arouter_compiler"
+    //ARouter
+    compile rootProject.ext.dependencies["ARouter-api"]
+    annotationProcessor rootProject.ext.dependencies["ARouter-compiler"]
 
     compile rootProject.ext.dependencies["butterknife"]
     annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
