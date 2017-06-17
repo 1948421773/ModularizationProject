@@ -8,6 +8,7 @@
         android:icon="@mipmap/second_house_ic_launcher"
         android:label="@string/second_house_app_name"
         android:supportsRtl="true"
+        android:name="com.baronzhang.android.commonbusiness.base.AppApplication"
         tools:replace="label"
         android:theme="@style/SecondHouseAppTheme">
         <activity

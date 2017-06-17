@@ -26,6 +26,7 @@ public class LoginActivity extends CommonBaseActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        ARouter.getInstance().inject(this);
         if(targetUrl == null){
             //默认跳转到MainActivity
             targetUrl = ConstantRouter.APP_MAINACTIVITY;
@@ -36,6 +37,7 @@ public class LoginActivity extends CommonBaseActivity{
             public void run() {
                 DataCenter.getInstance().setLogin(true);
                 ARouter.getInstance().build(targetUrl).navigation();
+                LoginActivity.this.finish();
             }
         },2000);
     }

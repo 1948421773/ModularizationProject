@@ -8,6 +8,7 @@
         android:icon="@mipmap/new_house_ic_launcher"
         android:label="@string/new_house_app_name"
         android:supportsRtl="true"
+        android:name="com.baronzhang.android.commonbusiness.base.AppApplication"
         tools:replace="label"
         android:theme="@style/NewHouseAppTheme">
         <activity

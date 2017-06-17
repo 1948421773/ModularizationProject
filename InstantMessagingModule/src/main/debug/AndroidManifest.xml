@@ -9,6 +9,7 @@
         android:label="@string/im_app_name"
         android:supportsRtl="true"
         tools:replace="label"
+        android:name="com.baronzhang.android.commonbusiness.base.AppApplication"
         android:theme="@style/IMAppTheme">
         <activity
             android:name="com.baronzhang.android.im.InstantMessagingMainActivity"

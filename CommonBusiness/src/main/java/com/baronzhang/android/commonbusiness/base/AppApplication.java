@@ -1,4 +1,4 @@
-package com.baronzhang.android.modularization;
+package com.baronzhang.android.commonbusiness.base;
 
 import android.app.Application;
 

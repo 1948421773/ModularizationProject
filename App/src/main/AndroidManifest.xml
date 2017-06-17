@@ -7,7 +7,7 @@
         android:icon="@mipmap/app_ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:name=".AppApplication"
+        android:name="com.baronzhang.android.commonbusiness.base.AppApplication"
         android:theme="@style/AppTheme">
         <activity android:name="com.baronzhang.android.modularization.MainActivity">
             <intent-filter>

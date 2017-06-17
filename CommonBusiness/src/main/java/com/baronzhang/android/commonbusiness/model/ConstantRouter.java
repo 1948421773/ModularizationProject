@@ -1,5 +1,7 @@
 package com.baronzhang.android.commonbusiness.model;
 
+import android.util.Log;
+
 import com.baronzhang.android.commonbusiness.base.login.LoginActivity;
 
 import java.util.HashMap;
@@ -36,7 +38,7 @@ public class ConstantRouter {
 
     private static String getActivityName(String routerUrl){
         int pos = routerUrl.lastIndexOf("/");
-        return routerUrl.substring(pos);
+        return routerUrl.substring(pos+1);
     }
 
     public static String getCurRouter(String activityName){
