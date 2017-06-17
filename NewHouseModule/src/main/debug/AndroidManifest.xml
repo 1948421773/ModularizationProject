@@ -8,16 +8,18 @@
         android:icon="@mipmap/new_house_ic_launcher"
         android:label="@string/new_house_app_name"
         android:supportsRtl="true"
-        android:name="com.baronzhang.android.commonbusiness.base.AppApplication"
+        android:name="com.baronzhang.android.commonbusiness.base.BaseApplication"
         tools:replace="label"
         android:theme="@style/NewHouseAppTheme">
-        <activity
-            android:name="com.baronzhang.android.newhouse.NewHouseMainActivity"
-            android:label="@string/new_house_label_home_page">
+        <activity android:name="com.baronzhang.android.commonbusiness.base.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.baronzhang.android.newhouse.NewHouseMainActivity"
+            android:label="@string/new_house_label_home_page">
         </activity>
 
     </application>

@@ -31,13 +31,6 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if(!DataCenter.getInstance().isLogin()){
-            String curUrl = ConstantRouter.getCurRouter(this.getClass().getSimpleName());
-            ARouter.getInstance().build(ConstantRouter.LOGIN_ACTIVITY)
-                    .withString("targetUrl",curUrl)
-                    .navigation();
-            finish();
-        }
         super.onCreate(savedInstanceState);
         ARouter.getInstance().inject(this);
     }

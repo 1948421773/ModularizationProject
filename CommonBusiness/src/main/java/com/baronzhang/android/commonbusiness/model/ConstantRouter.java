@@ -1,7 +1,12 @@
 package com.baronzhang.android.commonbusiness.model;
 
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.util.Log;
 
+import com.baronzhang.android.commonbusiness.R;
+import com.baronzhang.android.commonbusiness.base.BaseApplication;
+import com.baronzhang.android.commonbusiness.base.activity.BaseActivity;
 import com.baronzhang.android.commonbusiness.base.login.LoginActivity;
 
 import java.util.HashMap;
@@ -12,6 +17,7 @@ import java.util.Map;
  */
 
 public class ConstantRouter {
+    //各个模块首页和跳转地址的映射
     public static Map<String,String>activityRouterMap = new HashMap<>();
     //主页
     public static final String APP_MAINACTIVITY = "/app/MainActivity";
@@ -29,19 +35,14 @@ public class ConstantRouter {
     public static final String LOGIN_ACTIVITY = "/common_business/LoginActivity";
 
     static{
-        activityRouterMap.put(getActivityName(APP_MAINACTIVITY),APP_MAINACTIVITY);
-        activityRouterMap.put(getActivityName(IM_MAINACTIVITY),IM_MAINACTIVITY);
-        activityRouterMap.put(getActivityName(NEW_HOUSE_MAINACTIVITY),NEW_HOUSE_MAINACTIVITY);
-        activityRouterMap.put(getActivityName(SECOND_HOUSE_MAINACTIVITY),SECOND_HOUSE_MAINACTIVITY);
-        activityRouterMap.put(getActivityName(LOGIN_ACTIVITY),LOGIN_ACTIVITY);
+        activityRouterMap.put(BaseApplication.getApplication().getString(R.string.label_app),APP_MAINACTIVITY);
+        activityRouterMap.put(BaseApplication.getApplication().getString(R.string.label_instant_messaging),IM_MAINACTIVITY);
+        activityRouterMap.put(BaseApplication.getApplication().getString(R.string.label_second_house),SECOND_HOUSE_MAINACTIVITY);
+        activityRouterMap.put(BaseApplication.getApplication().getString(R.string.label_new_house),NEW_HOUSE_MAINACTIVITY);
     }
 
-    private static String getActivityName(String routerUrl){
-        int pos = routerUrl.lastIndexOf("/");
-        return routerUrl.substring(pos+1);
-    }
 
-    public static String getCurRouter(String activityName){
-        return activityRouterMap.get(activityName);
+    public static String getCurRouter(String label){
+        return activityRouterMap.get(label);
     }
 }

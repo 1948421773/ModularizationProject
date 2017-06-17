@@ -9,15 +9,18 @@
         android:label="@string/im_app_name"
         android:supportsRtl="true"
         tools:replace="label"
-        android:name="com.baronzhang.android.commonbusiness.base.AppApplication"
+        android:name="com.baronzhang.android.commonbusiness.base.BaseApplication"
         android:theme="@style/IMAppTheme">
-        <activity
-            android:name="com.baronzhang.android.im.InstantMessagingMainActivity"
-            android:label="@string/im_label_home_page">
+
+        <activity android:name="com.baronzhang.android.commonbusiness.base.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.baronzhang.android.im.InstantMessagingMainActivity"
+            android:label="@string/im_label_home_page">
         </activity>
     </application>
 

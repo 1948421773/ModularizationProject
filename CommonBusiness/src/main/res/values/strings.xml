@@ -1,3 +1,7 @@
 <resources>
     <!--<string name="app_name">CommonBusiness</string>-->
+    <string name="label_new_house">新房</string>
+    <string name="label_second_house">二手房</string>
+    <string name="label_instant_messaging">即时通讯</string>
+    <string name="label_app">Modularization</string>
 </resources>

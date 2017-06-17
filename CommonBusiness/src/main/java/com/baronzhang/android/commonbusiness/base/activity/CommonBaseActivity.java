@@ -10,7 +10,7 @@ import butterknife.Unbinder;
  * Created by 龙衣 on 17-6-16.
  */
 
-public abstract class CommonBaseActivity extends AppCompatActivity{
+public abstract class CommonBaseActivity extends BaseActivity{
     private Unbinder unbinder;
 
     @Override

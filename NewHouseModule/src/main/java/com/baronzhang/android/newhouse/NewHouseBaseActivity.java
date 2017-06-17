@@ -3,6 +3,7 @@ package com.baronzhang.android.newhouse;
 import android.support.annotation.LayoutRes;
 
 import com.baronzhang.android.commonbusiness.base.activity.BaseActivity;
+import com.baronzhang.android.commonbusiness.model.ConstantRouter;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
