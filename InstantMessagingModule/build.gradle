@@ -70,4 +70,7 @@ dependencies {
 
     compile rootProject.ext.dependencies["ARouter-api"]
     annotationProcessor rootProject.ext.dependencies["ARouter-compiler"]
+
+    compile rootProject.ext.dependencies["dagger"]
+    annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
 }

@@ -1,13 +1,18 @@
 package com.baronzhang.android.modularization;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.baronzhang.android.commonbusiness.model.ConstantRouter;
 import com.baronzhang.android.commonbusiness.model.HouseDetail;
+import com.baronzhang.android.modularization.dagger.DaggerAppActivityComponment;
 
 import java.util.ArrayList;
+
+
+import javax.inject.Inject;
 
 import butterknife.OnClick;
 
@@ -15,11 +20,15 @@ import butterknife.OnClick;
 public class MainActivity extends AppBaseActivity {
 
 
+    @Inject
+    HouseDetail houseDetail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.app_activity_main);
+        DaggerAppActivityComponment.builder().build().inject(this);
+        Log.d("longyi","main:"+houseDetail.toString());
 
     }
 
