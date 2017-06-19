@@ -1,11 +1,11 @@
 # Modularization Project
 
-##新加入功能
+## 新加入功能
 1. 支持ARouter路由跳转
 2. 每个模块都支持ButterKnife
 3. 每个模块都可以使用Dagger2
 4. 支持单独运行某个模块也可以走登录流程
-##以下来自原作者
+## 以下来自原作者
 > Android 模块化示例项目
 
 ## 模块化项目设计方案
