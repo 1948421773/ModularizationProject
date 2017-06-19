@@ -43,4 +43,5 @@ dependencies {
     compile rootProject.ext.dependencies["ormlite-android"]
 
     compile rootProject.ext.dependencies["retrofit2-fastjson-converter"]
+
 }

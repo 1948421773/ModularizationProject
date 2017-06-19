@@ -2,6 +2,7 @@ package com.baronzhang.android.commonbusiness.base.login;
 
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ProgressBar;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
@@ -9,8 +10,12 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.baronzhang.android.commonbusiness.R;
 import com.baronzhang.android.commonbusiness.R2;
 import com.baronzhang.android.commonbusiness.base.activity.CommonBaseActivity;
+import com.baronzhang.android.commonbusiness.dagger.DaggerActivityComponment;
 import com.baronzhang.android.commonbusiness.model.ConstantRouter;
 import com.baronzhang.android.commonbusiness.model.DataCenter;
+import com.baronzhang.android.commonbusiness.model.HouseDetail;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 
@@ -20,6 +25,10 @@ public class LoginActivity extends CommonBaseActivity{
     private String targetUrl;
     @BindView(R2.id.progressBar)
     ProgressBar progressBar;
+
+    @Inject
+    HouseDetail houseDetail;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +37,8 @@ public class LoginActivity extends CommonBaseActivity{
         if(targetUrl == null){
             targetUrl = ConstantRouter.APP_MAINACTIVITY;
         }
+        DaggerActivityComponment.builder().build().inject(this);
+        Log.d("longyi",houseDetail.toString());
         //此处用来模拟登录事件
         progressBar.postDelayed(new Runnable() {
             @Override
