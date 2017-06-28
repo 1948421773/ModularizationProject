@@ -5,12 +5,13 @@ import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.baronzhang.android.commonbusiness.base.activity.BaseActivity;
 import com.baronzhang.android.commonbusiness.model.ConstantRouter;
 
 import butterknife.BindView;
 
 @Route(path = "/new_house/NewHouseMainActivity")
-public class NewHouseMainActivity extends NewHouseBaseActivity{
+public class NewHouseMainActivity extends BaseActivity{
 
     @BindView(R2.id.textView1)
     TextView tv1;

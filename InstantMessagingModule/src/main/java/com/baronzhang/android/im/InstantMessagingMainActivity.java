@@ -5,12 +5,13 @@ import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.baronzhang.android.commonbusiness.base.activity.BaseActivity;
 import com.baronzhang.android.router.RouterInjector;
 
 import butterknife.BindView;
 
 @Route(path="/im/InstantMessagingMainActivity")
-public class InstantMessagingMainActivity extends IMBaseActivity{
+public class InstantMessagingMainActivity extends BaseActivity{
 
     @Autowired
     public String cityId;
