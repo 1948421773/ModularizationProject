@@ -44,4 +44,8 @@ dependencies {
 
     compile rootProject.ext.dependencies["retrofit2-fastjson-converter"]
 
+    compile rootProject.ext.dependencies["butterknife"]
+    compile rootProject.ext.dependencies["dagger"]
+    compile rootProject.ext.dependencies["ARouter-api"]
+
 }

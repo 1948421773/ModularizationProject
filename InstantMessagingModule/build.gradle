@@ -62,12 +62,9 @@ dependencies {
     compile project(':CommonBusiness')
 
 
-    compile rootProject.ext.dependencies["butterknife"]
     annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
 
-    compile rootProject.ext.dependencies["ARouter-api"]
     annotationProcessor rootProject.ext.dependencies["ARouter-compiler"]
 
-    compile rootProject.ext.dependencies["dagger"]
     annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
 }
