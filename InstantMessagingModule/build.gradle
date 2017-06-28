@@ -61,9 +61,6 @@ dependencies {
     compile project(':CoreModel')
     compile project(':CommonBusiness')
 
-    compile rootProject.ext.dependencies["router"]
-    annotationProcessor rootProject.ext.dependencies["router-compiler"]
-
 
     compile rootProject.ext.dependencies["butterknife"]
     annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]

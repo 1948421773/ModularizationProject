@@ -25,7 +25,6 @@ public class InstantMessagingMainActivity extends BaseActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.im_activity_instant_messaging_main);
 
-        RouterInjector.inject(this);
 
         TextView textView2 = (TextView) findViewById(R.id.textView2);
         tv1.setText("hello world");
