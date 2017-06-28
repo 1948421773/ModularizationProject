@@ -10,7 +10,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.baronzhang.android.commonbusiness.R;
 import com.baronzhang.android.commonbusiness.R2;
 import com.baronzhang.android.commonbusiness.base.activity.CommonBaseActivity;
-import com.baronzhang.android.commonbusiness.dagger.DaggerActivityComponment;
+import com.baronzhang.android.commonbusiness.dagger.DaggerCommonBusinessComponent;
 import com.baronzhang.android.commonbusiness.model.ConstantRouter;
 import com.baronzhang.android.commonbusiness.model.DataCenter;
 import com.baronzhang.android.commonbusiness.model.HouseDetail;
@@ -37,7 +37,7 @@ public class LoginActivity extends CommonBaseActivity{
         if(targetUrl == null){
             targetUrl = ConstantRouter.APP_MAINACTIVITY;
         }
-        DaggerActivityComponment.builder().build().inject(this);
+        DaggerCommonBusinessComponent.builder().build().inject(this);
         Log.d("longyi",houseDetail.toString());
         //此处用来模拟登录事件
         progressBar.postDelayed(new Runnable() {

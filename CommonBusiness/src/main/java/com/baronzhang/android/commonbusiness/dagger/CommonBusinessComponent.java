@@ -8,7 +8,7 @@ import dagger.Component;
  * Created by 龙衣 on 17-6-17.
  */
 
-@Component(modules = ActivityModule.class)
-public interface ActivityComponment {
+@Component(modules = CommonBusinessModule.class)
+public interface CommonBusinessComponent {
     void inject(LoginActivity loginActivity);
 }

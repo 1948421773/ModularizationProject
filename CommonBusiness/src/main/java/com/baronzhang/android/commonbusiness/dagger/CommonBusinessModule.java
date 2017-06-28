@@ -10,7 +10,7 @@ import dagger.Provides;
  */
 
 @Module
-public class ActivityModule {
+public class CommonBusinessModule {
     @Provides
     public HouseDetail provideHouseDetail(){
         return new HouseDetail();

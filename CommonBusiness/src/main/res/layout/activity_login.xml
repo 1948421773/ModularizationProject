@@ -11,5 +11,13 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录中....."
+        android:layout_below="@id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
 
 </RelativeLayout>

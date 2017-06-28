@@ -6,7 +6,10 @@ import android.widget.TextView;
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.baronzhang.android.commonbusiness.base.activity.BaseActivity;
-import com.baronzhang.android.router.RouterInjector;
+import com.baronzhang.android.commonbusiness.model.HouseDetail;
+import com.baronzhang.android.im.dagger.DaggerImComponenment;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 
@@ -20,17 +23,21 @@ public class InstantMessagingMainActivity extends BaseActivity{
 
     @BindView(R2.id.textView1)
     TextView tv1;
+    @BindView(R2.id.textView2)
+    TextView tv2;
+
+    @Inject
+    SecondHouse secondHouse;
+
+    @Inject
+    HouseDetail houseDetail;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.im_activity_instant_messaging_main);
-
-
-        TextView textView2 = (TextView) findViewById(R.id.textView2);
-        tv1.setText("hello world");
-
-//        textView1.setText("城市ID: " + cityId);
-//        textView2.setText("经纪人ID列表: " + brokerIdList);
-
+        DaggerImComponenment.builder().build().inject(this);
+        tv1.setText(secondHouse.toString());
+        tv2.setText(houseDetail.toString());
     }
 }
